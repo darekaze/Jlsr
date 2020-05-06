@@ -151,7 +151,7 @@ public class Main {
       sc = new Scanner(System.in);
       ans = sc.next().toUpperCase();
 
-      if (ans.equals("ADD")) {
+      if (ans.equals("ADD")) { // add node
         System.out.println("Please input the new node relation ([newNode]: [...existingNode:cost]):");
         sc = new Scanner(System.in);
         String newNode = sc.nextLine().toUpperCase();
@@ -163,13 +163,14 @@ public class Main {
         // Add new node to vertex list
         vList.put(nodeName, new Vertex(nodeName));
 
-        // Add neighbors
+        // Add neighbors in both sides
         for (int n = 1; n < attributes.length; n++) {
           String[] kv = attributes[n].split(":");
           String name = kv[0];
           int cost = Integer.parseInt(kv[1]);
 
           neighbors.add(new Edge(vList.get(name), cost));
+          vList.get(name).neighbors.add(new Edge(vList.get(nodeName), cost));
         }
         vList.get(nodeName).neighbors = neighbors;
 
