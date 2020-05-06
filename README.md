@@ -2,7 +2,7 @@
 
 > COMP4322 Project
 
-A program that emulates the processing done by routers utilizing link state routing (LSR) protoco
+A program that emulates the processing done by routers utilizing link state routing (LSR) protocol.
 
 ### Instructions
 
