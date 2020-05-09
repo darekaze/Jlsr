@@ -15,5 +15,5 @@ java -jar Jlsr.jar <filename> <source> <CA/SS>
 #### Exec example
 
 ```
-java -jar Jlsr.jar routes.lsa A SS
+java -jar Jlsr.jar routes.lsa t SS
 ```

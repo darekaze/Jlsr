@@ -1,6 +1,7 @@
-A: B:5 C:3 D:5
-B: A:5 C:4 E:3 F:2
-C: A:3 B:4 D:1 E:6
-D: A:5 C:1 E:3
-E: B:3 C:6 D:3 F:5
-F: B:2 E:5
+t: u:2 v:4 y:7 
+u: t:2 v:3 w:3 
+v: t:4 u:3 w:4 x:3 y:8 
+w: u:3 v:4 x:6 
+x: v:3 w:6 y:6 z:8 
+y: t:7 v:8 x:6 z:12
+z: x:8 y:12

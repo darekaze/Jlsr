@@ -121,7 +121,7 @@ public class Main {
     String mode = args[2].toUpperCase();
 
     Map<String, Vertex> vList = readVertexList(fileName);
-    Vertex src = vList.get(args[1].toUpperCase());
+    Vertex src = vList.get(args[1]);
 
     while (true) {
       // Compute the shortest paths for all nodes
