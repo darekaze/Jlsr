@@ -57,7 +57,7 @@ public class Main {
 
     try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
       stream.forEach((line) -> {
-        String nodeName = line.split(":")[0];
+        String nodeName = line.split(":")[0].toUpperCase();
         vList.put(nodeName, new Vertex(nodeName));
       });
     } catch (Exception e) {
@@ -67,12 +67,12 @@ public class Main {
     try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
       stream.forEach((line) -> {
         String[] attributes = line.split("\\s+");
-        String nodeName = attributes[0].split(":")[0];
+        String nodeName = attributes[0].split(":")[0].toUpperCase();
         ArrayList<Edge> neighbors = new ArrayList<>();
 
         for (int n = 1; n < attributes.length; n++) {
           String[] kv = attributes[n].split(":");
-          String name = kv[0];
+          String name = kv[0].toUpperCase();
           int cost = Integer.parseInt(kv[1]);
 
           neighbors.add(new Edge(vList.get(name), cost));
@@ -121,7 +121,7 @@ public class Main {
     String mode = args[2].toUpperCase();
 
     Map<String, Vertex> vList = readVertexList(fileName);
-    Vertex src = vList.get(args[1]);
+    Vertex src = vList.get(args[1].toUpperCase());
 
     while (true) {
       // Compute the shortest paths for all nodes
